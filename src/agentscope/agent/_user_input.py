@@ -192,13 +192,13 @@ class StudioUserInput(UserInputBase):
         def on_connect() -> None:
             self._is_connected = True
             logger.info(
-                'Connected to AgentScope Studio with project name "%s" and '
+                'Connected to AgentScope Studio at "%s" with '
                 'run name "%s".',
                 self.studio_url,
                 run_id,
             )
             logger.info(
-                "View the run at: %s/dashboard/projects/%s",
+                "View the run at: %s/projects/%s",
                 self.studio_url,
                 _config.project,
             )

@@ -35,7 +35,7 @@ class TestOpenAIChatModel(IsolatedAsyncioTestCase):
     def test_init_with_custom_params(self) -> None:
         """Test initialization with custom parameters."""
         generate_kwargs = {"temperature": 0.7, "max_tokens": 1000}
-        client_args = {"timeout": 30}
+        client_kwargs = {"timeout": 30}
         with patch("openai.AsyncClient") as mock_client:
             model = OpenAIChatModel(
                 model_name="gpt-4o",
@@ -43,7 +43,7 @@ class TestOpenAIChatModel(IsolatedAsyncioTestCase):
                 stream=False,
                 reasoning_effort="high",
                 organization="org-123",
-                client_args=client_args,
+                client_kwargs=client_kwargs,
                 generate_kwargs=generate_kwargs,
             )
             self.assertEqual(model.model_name, "gpt-4o")
@@ -261,6 +261,7 @@ class TestOpenAIChatModel(IsolatedAsyncioTestCase):
         message.content = content
         message.reasoning_content = None
         message.tool_calls = []
+        message.audio = None
         message.parsed = None
 
         choice = Mock()
@@ -354,6 +355,12 @@ class TestOpenAIChatModel(IsolatedAsyncioTestCase):
                 delta = Mock()
                 delta.content = chunk_data.get("content")
                 delta.reasoning_content = chunk_data.get("reasoning_content")
+
+                audio_mock = Mock()
+                audio_mock.__contains__ = lambda self, key: False
+                delta.audio = audio_mock
+                if "audio" in chunk_data:
+                    delta.audio = chunk_data["audio"]
                 if "tool_calls" in chunk_data:
                     tool_call_mocks = []
                     for tc_data in chunk_data["tool_calls"]:

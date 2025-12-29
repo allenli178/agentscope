@@ -53,6 +53,23 @@
 <img src="https://trendshift.io/api/badge/repositories/10079" alt="modelscope%2Fagentscope | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/>
 </p>
 
+## 📢 新闻
+- **[2025-12]** AgentScope 已支持 [TTS(Text-to-Speech) 模型](https://doc.agentscope.io/zh_CN/tutorial/task_tts.html) ！欢迎查看 [样例]() 和 [教程](https://doc.agentscope.io/zh_CN/tutorial/task_tts.html) 了解更多详情。
+- **[2025-11]** AgentScope 已支持 [Anthropic Agent Skill](https://claude.com/blog/skills) ！欢迎查看 [样例](https://github.com/agentscope-ai/agentscope/tree/main/examples/functionality/agent_skill) 和 [教程](https://doc.agentscope.io/zh_CN/tutorial/task_agent_skill.html) 了解更多详情。
+- **[2025-11]** AgentScope 开源 [Alias-Agent](https://github.com/agentscope-ai/agentscope-samples/tree/main/alias) 用于处理多样化的真实任务，以及 [Data-Juicer Agent](https://github.com/agentscope-ai/agentscope-samples/tree/main/data_juicer_agent) 用于自然语言驱动的数据处理。
+- **[2025-11]** AgentScope 通过集成 [Trinity-RFT](https://github.com/modelscope/Trinity-RFT) 实现对 [Agentic RL](https://github.com/agentscope-ai/agentscope/tree/main/examples/training/react_agent) 的支持。
+- **[2025-11]** AgentScope 集成 [ReMe](https://github.com/agentscope-ai/agentscope/tree/main/examples/functionality/long_term_memory/reme) 增强长期记忆能力。
+- **[2025-11]** AgentScope 推出 [agentscope-samples](https://github.com/agentscope-ai/agentscope-samples) 样例库，并升级 [agentscope-runtime](https://github.com/agentscope-ai/agentscope-runtime) 支持 Docker/K8s 部署和 VNC 驱动的图形化沙盒。
+- **[2025-11]** [Contributing Guide](./CONTRIBUTING.md) 已更新，欢迎贡献到 AgentScope！
+- **[2025-09]** AgentScope 1.0 **RAG** 模块已上线！欢迎查看 [文档](https://doc.agentscope.io/zh_CN/tutorial/task_rag.html) 和 [样例](https://github.com/agentscope-ai/agentscope/tree/main/examples/functionality/rag)。
+- **[2025-09]** **Voice agent** 已上线！`ReActAgent` 已原生支持 Qwen-Omni 和 GPT-Audio 系列模型，欢迎查看 [样例](https://github.com/agentscope-ai/agentscope/tree/main/examples/agent/voice_agent) 和 [roadmap](https://github.com/agentscope-ai/agentscope/issues/773)。
+- **[2025-09]** 一个全新功能强大的 📋**Plan** 模块已经上线 AgentScope！查看[文档](https://doc.agentscope.io/zh_CN/tutorial/task_plan.html)了解更多详情。
+- **[2025-09]** **AgentScope Runtime** 现已开源！支持沙盒化工具执行的高效智能体部署，助力打造生产级AI应用。查看 [GitHub 仓库](https://github.com/agentscope-ai/agentscope-runtime)。
+- **[2025-09]** **AgentScope Studio** 现已开源！查看 [GitHub 仓库](https://github.com/agentscope-ai/agentscope-studio)。
+- **[2025-08]** v1 版本 Tutorial 已上线！查看 [tutorial](https://doc.agentscope.io/zh_CN/) 了解更多详情。
+- **[2025-08]** 🎉🎉 AgentScope v1现已发布！在完全拥抱异步执行的基础上提供许多新功能和改进。查看 [changelog](https://github.com/agentscope-ai/agentscope/blob/main/docs/changelog.md) 了解详细变更。
+
+
 ## ✨ Why AgentScope？
 
 浅显入门，精深致用。
@@ -93,30 +110,25 @@ AgentScope v1.0 新功能概览:
 |            | 允许智能体自主控制长期记忆                          |                                                                               |
 |            | 支持智能体钩子函数                              |                                                                               |
 | tracing    | 支持基于 OpenTelemetry 的 LLM、工具、智能体和格式化器追踪 | [Tracing](https://doc.agentscope.io/zh_CN/tutorial/task_tracing.html)         |
-|            | 支持连接到第三方追踪平台（如Arize-Phoenix、Langfuse）  |                                                                               |
+|            | 支持连接到第三方追踪平台（如阿里云云监控、Arize-Phoenix、Langfuse）  |                                                                               |
 | memory     | 支持长期记忆                                 | [Memory](https://doc.agentscope.io/zh_CN/tutorial/task_long_term_memory.html) |
 | session    | 提供会话/应用级状态管理                           | [Session](https://doc.agentscope.io/zh_CN/tutorial/task_state.html)           |
 | evaluation | 提供分布式和并行评估                             | [Evaluation](https://doc.agentscope.io/zh_CN/tutorial/task_eval.html)         |
 | formatter  | 支持多Agent提示格式化与工具API                    | [Prompt Formatter](https://doc.agentscope.io/zh_CN/tutorial/task_prompt.html) |
 |            | 支持基于截断的格式化策略                           |                                                                               |
-| plan       | 支持任务分解和计划制定                           | [Plan](https://doc.agentscope.io/zh_CN/tutorial/task_plan.html)               |
-|            | 支持开发者手动设定计划                          | |
+| plan       | 支持任务分解和计划制定                            | [Plan](https://doc.agentscope.io/zh_CN/tutorial/task_plan.html)               |
+|            | 支持开发者手动设定计划                            |                                                                               |
+| RAG        | 支持 agentic RAG                         | [RAG](https://doc.agentscope.io/tutorial/task_rag.html)                       |
+|            | 支持多模态 RAG                              |                                                                               |
 | ...        |                                        |                                                                               |
-
-## 📢 新闻
-- **[2025-09]** 一个全新功能强大的 📋**Plan** 模块已经上线 AgentScope！查看[文档](https://doc.agentscope.io/zh_CN/tutorial/task_plan.html)了解更多详情。
-- **[2025-09]** **AgentScope Runtime** 现已开源！支持沙盒化工具执行的高效智能体部署，助力打造生产级AI应用。查看 [GitHub 仓库](https://github.com/agentscope-ai/agentscope-runtime)。
-- **[2025-09]** **AgentScope Studio** 现已开源！查看 [GitHub 仓库](https://github.com/agentscope-ai/agentscope-studio)。
-- **[2025-08]** v1 版本 Tutorial 已上线！查看[tutorial](https://doc.agentscope.io/zh_CN/)了解更多详情。
-- **[2025-08]** 🎉🎉 AgentScope v1现已发布！在完全拥抱异步执行的基础上提供许多新功能和改进。查看[changelog](https://github.com/agentscope-ai/agentscope/blob/main/docs/changelog.md)了解详细变更。
 
 ## 💬 联系我们
 
 欢迎加入我们的社区，获取最新的更新和支持！
 
-| [Discord](https://discord.gg/eYMpfnkG8h)                                                                                         | 钉钉                                                                                                                              |
-|----------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| <img src="https://gw.alicdn.com/imgextra/i1/O1CN01hhD1mu1Dd3BWVUvxN_!!6000000000238-2-tps-400-400.png" width="100" height="100"> | <img src="https://img.alicdn.com/imgextra/i1/O1CN01LxzZha1thpIN2cc2E_!!6000000005934-2-tps-497-477.png" width="100" height="100"> |
+| [Discord](https://discord.gg/eYMpfnkG8h)                                                                                         | 钉钉                                                                        |
+|----------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|
+| <img src="https://gw.alicdn.com/imgextra/i1/O1CN01hhD1mu1Dd3BWVUvxN_!!6000000000238-2-tps-400-400.png" width="100" height="100"> | <img src="./assets/images/dingtalk_qr_code.png" width="100" height="100"> |
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -125,6 +137,7 @@ AgentScope v1.0 新功能概览:
 - [🚀 快速开始](#-%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B)
   - [💻 安装](#-%E5%AE%89%E8%A3%85)
     - [🛠️ 从源码安装](#-%E4%BB%8E%E6%BA%90%E7%A0%81%E5%AE%89%E8%A3%85)
+    - [🔄 使用 uv 安装（推荐，安装更快）](#-%E4%BD%BF%E7%94%A8-uv-%E5%AE%89%E8%A3%85%E6%8E%A8%E8%8D%90%E5%AE%89%E8%A3%85%E6%9B%B4%E5%BF%AB)
     - [📦 从PyPi安装](#-%E4%BB%8Epypi%E5%AE%89%E8%A3%85)
 - [📝 样例](#-%E6%A0%B7%E4%BE%8B)
   - [👋 Hello AgentScope！](#-hello-agentscope)
@@ -133,6 +146,7 @@ AgentScope v1.0 新功能概览:
   - [🧑‍🤝‍🧑 多智能体对话](#-%E5%A4%9A%E6%99%BA%E8%83%BD%E4%BD%93%E5%AF%B9%E8%AF%9D)
   - [💻 AgentScope Studio](#-agentscope-studio)
 - [📖 文档](#-%E6%96%87%E6%A1%A3)
+- [🤝 贡献](#-%E8%B4%A1%E7%8C%AE)
 - [⚖️ 许可](#-%E8%AE%B8%E5%8F%AF)
 - [📚 论文](#-%E8%AE%BA%E6%96%87)
 - [✨ 贡献者](#-%E8%B4%A1%E7%8C%AE%E8%80%85)
@@ -156,10 +170,29 @@ cd agentscope
 pip install -e .
 ```
 
+#### 🔄 使用 uv 安装（推荐，安装更快）
+
+[uv](https://github.com/astral-sh/uv) 是一个用 Rust 编写的快速 Python 包安装程序和解析器。
+
+```bash
+# 克隆仓库
+git clone -b main https://github.com/agentscope-ai/agentscope.git
+cd agentscope
+
+# 使用 uv 安装
+uv pip install -e .
+```
+
 #### 📦 从PyPi安装
 
 ```bash
 pip install agentscope
+```
+
+或者使用 uv：
+
+```bash
+uv pip install agentscope
 ```
 
 ## 📝 样例
@@ -292,22 +325,22 @@ as_studio
 
 <p align="center">
     <img
-        src="./assets/images/home.gif"
+        src="https://img.alicdn.com/imgextra/i1/O1CN01PG2MdF1Zc44A1QM6N_!!6000000003214-1-tps-1971-1080.gif"
         width="49%"
         alt="home"
     />
     <img
-        src="./assets/images/projects.gif"
-        width="49%"
-        alt="projects"
-    />
-    <img
-        src="./assets/images/runtime.gif"
+        src="https://img.alicdn.com/imgextra/i2/O1CN01pGHedL1L4ibmyPeiq_!!6000000001246-1-tps-1971-1080.gif"
         width="49%"
         alt="runtime"
     />
     <img
-        src="./assets/images/friday.gif"
+        src="https://img.alicdn.com/imgextra/i1/O1CN01HfFhy928SSJAcWQ8c_!!6000000007931-1-tps-1971-1080.gif"
+        width="49%"
+        alt="traces"
+    />
+    <img
+        src="https://img.alicdn.com/imgextra/i1/O1CN01vovov821Arms9tEJ1_!!6000000006945-1-tps-1971-1080.gif"
         width="49%"
         alt="friday"
     />
@@ -337,6 +370,7 @@ as_studio
   - [长期记忆](https://doc.agentscope.io/zh_CN/tutorial/task_long_term_memory.html)
   - [智能体](https://doc.agentscope.io/zh_CN/tutorial/task_agent.html)
   - [管道（Pipeline）](https://doc.agentscope.io/zh_CN/tutorial/task_pipeline.html)
+  - [计划](https://doc.agentscope.io/zh_CN/tutorial/task_plan.html)
   - [状态/会话管理](https://doc.agentscope.io/zh_CN/tutorial/task_state.html)
   - [智能体钩子函数](https://doc.agentscope.io/zh_CN/tutorial/task_hook.html)
   - [MCP](https://doc.agentscope.io/zh_CN/tutorial/task_mcp.html)
@@ -348,6 +382,23 @@ as_studio
 - API
   - [API文档](https://doc.agentscope.io/zh_CN/api/agentscope.html)
 - [示例](https://github.com/agentscope-ai/agentscope/tree/main/examples)
+  - 功能演示
+    - [MCP](https://github.com/agentscope-ai/agentscope/tree/main/examples/functionality/mcp)
+    - [Anthropic 智能体技能](https://github.com/agentscope-ai/agentscope/tree/main/examples/functionality/agent_skill)
+    - [计划](https://github.com/agentscope-ai/agentscope/tree/main/examples/functionality/plan)
+    - [结构化输出](https://github.com/agentscope-ai/agentscope/tree/main/examples/functionality/structured_output)
+    - [RAG](https://github.com/agentscope-ai/agentscope/tree/main/examples/functionality/rag)
+    - [长期记忆](https://github.com/agentscope-ai/agentscope/tree/main/examples/functionality/long_term_memory)
+    - [基于DB的会话管理](https://github.com/agentscope-ai/agentscope/tree/main/examples/functionality/session_with_sqlite)
+    - [流式获取打印消息](https://github.com/agentscope-ai/agentscope/tree/main/examples/functionality/stream_printing_messages)
+    - [TTS](https://github.com/agentscope-ai/agentscope/tree/main/examples/functionality/tts)
+    - [高代码部署](https://github.com/agentscope-ai/agentscope/tree/main/examples/deployment/planning_agent)
+  - 智能体
+    - [ReAct 智能体](https://github.com/agentscope-ai/agentscope/tree/main/examples/agent/react_agent)
+    - [语音智能体](https://github.com/agentscope-ai/agentscope/tree/main/examples/agent/voice_agent)
+    - [Deep Research 智能体](https://github.com/agentscope-ai/agentscope/tree/main/examples/agent/deep_research_agent)
+    - [Browser-use 智能体](https://github.com/agentscope-ai/agentscope/tree/main/examples/agent/browser_agent)
+    - [Meta Planner 智能体](https://github.com/agentscope-ai/agentscope/tree/main/examples/agent/meta_planner_agent)
   - 游戏
     - [九人制狼人杀](https://github.com/agentscope-ai/agentscope/tree/main/examples/game/werewolves)
   - 工作流
@@ -356,13 +407,13 @@ as_studio
     - [多智能体并发](https://github.com/agentscope-ai/agentscope/tree/main/examples/workflows/multiagent_concurrent)
   - 评测
     - [ACEBench](https://github.com/agentscope-ai/agentscope/tree/main/examples/evaluation/ace_bench)
-  - 功能演示
-    - [ReAct Agent](https://github.com/agentscope-ai/agentscope/tree/main/examples/react_agent)
-    - [MCP](https://github.com/agentscope-ai/agentscope/tree/main/examples/functionality/mcp)
-    - [计划](https://github.com/agentscope-ai/agentscope/tree/main/examples/functionality/plan)
-    - [结构化输出](https://github.com/agentscope-ai/agentscope/tree/main/examples/functionality/structured_output)
-    - [长期记忆](https://github.com/agentscope-ai/agentscope/tree/main/examples/functionality/long_term_memory)
-    - [基于DB的会话管理](https://github.com/agentscope-ai/agentscope/tree/main/examples/functionality/session_with_sqlite)
+  - 训练
+    - [使用 Trinity-RFT 进行强化学习训练](https://github.com/agentscope-ai/agentscope/tree/main/examples/training/react_agent)
+
+
+## 🤝 贡献
+
+我们欢迎并鼓励社区成员为 AgentScope 做出贡献！请参阅我们的 [贡献指南](./CONTRIBUTING.md) 了解更多详情。
 
 ## ⚖️ 许可
 
